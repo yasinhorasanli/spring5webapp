@@ -5,9 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * Created by jt on 12/24/19.
- */
 @Controller
 public class AuthorController {
 
@@ -18,9 +15,9 @@ public class AuthorController {
     }
 
     @RequestMapping("/authors")
-    public String getAuthrors(Model model){
-        model.addAttribute("authors", authorRepository.findAll());
+    public String getAuthors(Model model) {
 
+        model.addAttribute("authors", authorRepository.findAll());
         return "authors/list";
     }
 }
